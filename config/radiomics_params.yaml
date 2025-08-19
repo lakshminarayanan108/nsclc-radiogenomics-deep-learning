@@ -1,0 +1,52 @@
+# radiomics_params.yaml
+# Template PyRadiomics configuration file
+# Ensures consistent feature extraction across all patients
+
+
+# General Settings
+# -----------------
+
+setting:
+  # Re-segment intensities to a meaningful range for CT lung
+  # (Hounsfield units: -1000 = air, 0 = water, 1000+ = bone)
+  # Most lung radiomics papers use [-1000, 400]
+  resegmentRange: [-1000, 400]
+
+  # Resample voxel spacing (mm) to make scans comparable
+  resampledPixelSpacing: [1, 1, 1]   # isotropic 1mm
+
+  # Interpolation used during resampling
+  interpolator: 'sitkBSpline'
+
+  # How to handle partial voxel inclusion
+  correctMask: True
+
+  # Binning for texture features (important!)
+  binWidth: 25   # typical range: 20–30 HU for CT
+
+
+# Image Types
+# ------------
+
+imageType:
+  Original: {}
+  Wavelet: {}
+  LoG:
+    sigma: [1.0, 2.0, 3.0]   # Laplacian of Gaussian filters (multi-scale)
+
+
+# Features to Enable
+# -------------------
+
+featureClass:
+  shape:
+  firstorder:
+  glcm:
+  glrlm:
+  glszm:
+  gldm:
+  ngtdm:
+
+
+
+

@@ -1,0 +1,39 @@
+# Utils & viz
+numpy>=1.26
+pandas>=2.2
+umap-learn
+matplotlib>=3.9
+seaborn>=0.13
+
+# Core DL
+torch>=2.4
+torchvision>=0.19
+torchaudio>=2.4
+
+# Medical imaging
+monai>=1.3.0
+nibabel>=5.2.0
+SimpleITK>=2.3.1
+pydicom>=2.4.4
+pyradiomics==3.0.1
+scikit-image>=0.24.0
+
+# ML & survival analysis
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+lightgbm>=4.3.0
+lifelines>=0.28.0
+
+# Optimisation & explainability
+optuna>=3.6.0
+shap>=0.45.0
+
+# Experiment mgmt
+dvc[gs]>=3.52.0
+
+# segmentation
+TotalSegmentator
+
+# gene symbol parsing
+GEOparse
+
